@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>чайок</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background-color: #BBBF3F;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #70A65C;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            animation: animate__zoomIn 1s ease-in-out 0.2s;
+            /* Резервна анімація */
+            animation: zoomInCustom 1s ease-in-out 0.2s;
+        }
+
+        #history {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #history .text {
+            width: 60%;
+        }
+
+        #history .text h2 {
+            animation: animate__fadeInDown 1s ease-in-out 0.4s;
+            /* Резервна анімація */
+            animation: fadeInDownCustom 1s ease-in-out 0.4s;
+        }
+
+        #history .image {
+            width: 40%;
+        }
+
+        #history img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            animation: animate__slideInRight 1s ease-in-out 0.6s;
+            /* Резервна анімація */
+            animation: slideInRightCustom 1s ease-in-out 0.6s;
+        }
+
+        #types {
+            padding: 20px;
+        }
+
+        #types h2 {
+            text-align: center;
+            font-size: 2em;
+            animation: animate__slideInLeft 1s ease-in-out 0.8s;
+            /* Резервна анімація */
+            animation: slideInLeftCustom 1s ease-in-out 0.8s;
+        }
+
+        .tea-type {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .tea-type img {
+            width: 120px;
+            height: 120px;
+            max-width: 150px;
+            margin-right: 20px;
+            animation: scaleUp 0.8s ease-in-out 1s;
+            transition: transform 0.3s ease;
+        }
+
+        .tea-type img:hover {
+            transform: scale(1.1);
+        }
+
+        .tea-type p {
+            width: 70%;
+        }
+
+        footer {
+            background-color: #70A65C;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        footer img {
+            width: 60px;
+            height: 60px;
+            margin: 0 10px;
+            border-radius: 50%;
+            animation: animate__rotateIn 1s ease-in-out 1.2s;
+            /* Резервна анімація */
+            animation: rotateInCustom 1s ease-in-out 1.2s;
+            transition: transform 0.3s ease;
+        }
+
+        footer img:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Резервні анімації на випадок, якщо Animate.css не завантажується */
+        @keyframes zoomInCustom {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDownCustom {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRightCustom {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeftCustom {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateInCustom {
+            0% {
+                transform: rotate(-200deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotate(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated">чай</h1>
+    </header>
+    <section id="history">
+        <div class="text">
+            <h2 class="animate__animated">Виникнення чаю</h2>
+            <p>Згідно з легендою, китайський імператор Шень-нун випадково відкрив чай, коли в горщик із кип’яченою водою впало кілька листочків з дикого чайного дерева. Напій мав приємний аромат, і імператор вирішив його спробувати. Відтоді чай почали вживати в лікувальних цілях.</p>
+        </div>
+        <div class="image">
+            <img src="https://i.pinimg.com/736x/2d/ca/74/2dca74a35325db8c95081d0231c02d90.jpg" class="animate__animated"/>
+        </div>
+    </section>
+    <section id="types">
+        <h2 class="animate__animated">Види чаю</h2>
+        <div class="tea-type">
+            <img src="https://i.pinimg.com/736x/aa/24/31/aa2431f499d2de3871396e14e828c6ab.jpg" alt="Зелений чай" class="animate__animated">
+            <p>Обробляється мінімально, без ферментації. Відомий антиоксидантними властивостями.</p>
+        </div>
+        <div class="tea-type">
+            <img src="https://i.pinimg.com/736x/ea/64/b8/ea64b8f511a60c23bf7224376ecfc4fb.jpg" alt="Чорний чай" class="animate__animated">
+            <p>Повністю ферментований, має насичений смак і темний колір. Найпопулярніший у Європі. Містить більше кофеїну, ніж інші чаї.</p>
+        </div>
+        <div class="tea-type">
+            <img src="https://i.pinimg.com/736x/22/0b/f0/220bf0e29492298bc99e3b46e840199e.jpg" alt="Трав’яний чай" class="animate__animated">
+            <p>Не містить чайного листя — це настої з трав, квітів, плодів. Наприклад, ромашка, м’ята чи шипшина. Не містить кофеїну.</p>
+        </div>
+        <div class="tea-type">
+            <img src="https://i.pinimg.com/736x/d1/e1/65/d1e16579ab63eb7d65335fe6dff2f4c5.jpg" alt="Білий чай" class="animate__animated">
+            <p>Найменш оброблений: використовуються молоді бруньки і листочки. Смак м’який, легкий, з квітковими нотками. Багатий на антиоксиданти.</p>
+        </div>
+        <div class="tea-type">
+            <img src="https://i.pinimg.com/736x/20/f9/a0/20f9a0a7962dbb59efe7f1a3a5401a6f.jpg" alt="Чай уулунг" class="animate__animated">
+            <p>Частково ферментований чай, займає проміжне місце між зеленим і чорним. Має складний смак — від квіткового до карамельно-горіхового.</p>
+        </div>
+        <div class="tea-type">
+            <img src="https://i.pinimg.com/736x/93/49/a1/9349a169ea612abdbb9ff61cbd9e99d8.jpg" alt="Чай пуеро" class="animate__animated">
+            <p>Ферментований і витриманий чай родом із Китаю. Має землистий, насичений смак. Може зберігатися роками — як вино.</p>
+        </div>
+    </section>
+    <footer>
+        <img src="https://i.pinimg.com/736x/aa/24/31/aa2431f499d2de3871396e14e828c6ab.jpg" alt="Іконка 1" class="animate__animated">
+        <img src="https://i.pinimg.com/736x/05/50/1f/05501f0d77392d19a416abf3fe2dfada.jpg" alt="Іконка 2" class="animate__animated">
+        <img src="https://i.pinimg.com/736x/58/23/53/58235370417165c0f25b84f125c998df.jpg" alt="Іконка 3" class="animate__animated">
+        <img src="https://i.pinimg.com/736x/dd/c1/08/ddc10828469b23f1efb2338917a2f82d.jpg" alt="Іконка 4" class="animate__animated">
+    </footer>
+</body>
+</html>
